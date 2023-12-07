@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #181818;
+        }
+
+        nav {
+            background-color: white;
+            overflow: hidden;
+            text-align: right;
+            background-color: #303030;
+
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 60px;
+        }
+
+        .grid-item img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .website-name{
+            float: left;
+          display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;   
+        }
+            .grid-container figcaption{
+            text-align: center;
+            color: white;
+        }
+         .website-name:hover{
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="website-name">MovieDB</div>
+        <a href="popular.html" onclick="showGrid('popular')">Popular</a>
+        <a href="toprated.html">Top Rated</a>
+      
+        <a href="upcoming.html" onclick="showGrid('upcoming')">Upcoming</a>
+        <input type="search" id="query" name="q" placeholder="Movie Name..">
+  <button>Search</button>
+
+    </nav>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="https://i0.wp.com/strangehorizons.com/wordpress/wp-content/uploads/2018/11/venom.jpg?fit=300%2C400" alt="Movie 1">
+            <figcaption>Venom:Let there be carnage <br> Rating 7.2</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.mediaplaynews.com/wp-content/uploads/2021/11/Red-Notice-Poster.jpg" alt="Movie 2">
+            <figcaption>Red Notice <br>Rating 6.8</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://i.ebayimg.com/images/g/kUAAAOSwr3hjk3LI/s-l400.jpg" alt="Movie 3">
+            <figcaption>Clifford:The Big Red Dog <br>Rating 7.6</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://i.ebayimg.com/images/g/O2sAAOSwVIhhNmGT/s-l400.jpg" alt="Movie 4">
+            <figcaption>Shang-Chi and The Legend of Ten Rings<br>Rating 7.8</figcaption>
+        </div>
+        
+         <div class="grid-item">
+            <img src="https://img1.od-cdn.com/ImageType-400/0111-1/46D/310/94/%7B46D31094-01C9-4ED2-A434-9B1641E19B59%7DImg400.jpg" alt="Top Rated 3">
+            <figcaption>Encanto<br>Rating 7.4</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi0AeJb_FzQ3AmLU36fOhBQMEPpCq5WF6K26aYHmy3Rlk7GqwZMOAPTWbtpMzmcvA1iXHg261uh6nWRXIrexJZG6vW0kBAvdf7P3pwKOIoPtuzrCYewtV8r1QMmuuwwJXxNCOaLcLZS6AeQUhN8fdWN8dyJSSuN1NzS24ImXZercv8pjJLE6DZ4O6IKhg=w300-h400" alt="Top Rated 4">
+            <figcaption>Spiderman:NO Way Home<br>Rating 8.0</figcaption>
+         </div>
+         <div class="grid-item">
+            <img src="https://plakati.bg/image/cache/data/poster-maxi/PP30558-511x768-300x400.jpg" alt="Movie 3">
+            <figcaption>The Godfather <br>Rating 8.7</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://img1.od-cdn.com/ImageType-400/4039-1/12D/F3F/73/%7B12DF3F73-C786-4CFC-978E-764ADBF9C01A%7DImg400.jpg" alt="Movie 4">
+
+            <figcaption>Gabriel's Inferno <br>Rating 8.7</figcaption>
+        </div>
+    </div>
+
+<script>
+    
+    var clickableImage = document.getElementById("clickableImage");    
+    clickableImage.addEventListener("click", function() {
+        var webpageURL = "venomWebpage.html";
+        window.open(webpageURL, "_blank");
+    });
+</script>
+
+</body>
+</html>

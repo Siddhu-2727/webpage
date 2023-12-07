@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #404040;
+        }
+
+        nav {
+            background-color: white;
+            overflow: hidden;
+            text-align: right;
+            background-color: #303030;
+
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+         .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-item img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .website-name{
+            float: left;
+          display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;   
+        }
+        .website-name:hover{
+            background-color: #555;
+            color: white;
+        }
+   
+
+       .container {
+            width: 96%;
+            border: 1px ;
+            padding: 10px;
+            overflow: hidden; 
+            border: 3px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            background-color: lightblue;
+        }
+
+         .thumbnail {
+            width: 100px;
+            height: 150px;
+            float: left; /* Float to the left for positioning */
+            margin-right: 10px;
+        }
+
+         .main-image {
+            width: 600px;
+            height: 400px;
+            float: right; /* Float to the right for positioning */
+        }
+
+          .description {
+            max-width: 60%; /* Adjust the width of the description as needed */
+            margin-left: 20px; /* Add spacing between thumbnail and description */
+        }
+
+        h2{
+            margin-left: 10px;
+            color: white;
+        }
+        .grid-item figcaption{
+            color: white;
+        }
+
+      
+    </style>
+</head>
+<body>
+    
+     <nav>
+        <div class="website-name">MovieDB</div>
+        <a href="popular.html" onclick="showGrid('popular')">Popular</a>
+        <a href="toprated.html">Top Rated</a>
+      
+        <a href="upcoming.html" onclick="showGrid('upcoming')">Upcoming</a>
+       <input type="search" id="query" name="q" placeholder="Movie Name..">
+  <button>Search</button>
+
+    </nav>
+
+    <!-- <div class="thumbnail">
+            <div>
+                 <img src="https://i0.wp.com/strangehorizons.com/wordpress/wp-content/uploads/2018/11/venom.jpg"><p>After finding a host body in investigative reporter Eddie Brock,<br> the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.
+            </div>  
+    </div> -->
+
+
+    <div class="container">
+        <div class="thumbnail-image">
+            <img src="https://i0.wp.com/strangehorizons.com/wordpress/wp-content/uploads/2018/11/venom.jpg" alt="Thumbnail" class="thumbnail">
+            
+        </div>
+
+         <div class="main-image">
+            <img src="https://wallpapers.com/images/hd/venom-pictures-fy7adc0g6sv3v73n.jpg" alt="Main Image" class="main-image">
+        </div>
+    </div>
+
+
+
+
+<h2>Cast</h2>
+<div class="grid-container">
+
+        <div class="grid-item">
+            <img src="https://cdn.britannica.com/38/188638-050-08A5704E/Tom-Hardy-British-2014.jpg" alt="caster1">
+           <figcaption>Tom Hardy <br>Character: Eddie Brock/ Venom</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.themoviedb.org/t/p/w500/igxYDQBbTEdAqaJxaW6ffqswmUU.jpg" alt="caster2">
+           <figcaption>Woody Harrelson<br>Character: Cletus Kasady / Carnage</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.themoviedb.org/t/p/w500/jn3BVMVbIptz2gc6Fhxo1qwJVvW.jpg" alt="caster3">
+            <figcaption>Michelle Williams<br>Character: Anne Weying</figcaption>
+         </div>
+
+        <div class="grid-item">
+            <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/265396_v9_bb.jpg" alt="caster4">
+            <figcaption>Naomie Harris<br>Character: Frances Louise Barrison / Shriek</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzUzMjcwOTMzNF5BMl5BanBnXkFtZTgwMjE3MDEwNDE@._V1_.jpg" alt="caster5">
+            <figcaption>Reid Scott<br>Character: Dr. Dan Lewis</figcaption>
+         </div>
+
+        <div class="grid-item">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDA0OGU1OWUtZDNhNC00YzdkLTk5ZWYtY2RjNTM0NjBmYmYwXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg" alt="caster6">
+            <figcaption>Stephen Graham<br>Character:Patrick Mulligan</figcaption>
+           
+        </div>
+
+
+    </div>
+</body>
+</html>

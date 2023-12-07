@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #181818;
+        }
+
+        nav {
+            background-color: white;
+            overflow: hidden;
+            text-align: right;
+            background-color: #303030;
+
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 60px;
+        }
+
+        .grid-item img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .website-name{
+            float: left;
+          display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;   
+        }
+            .grid-container figcaption{
+            text-align: center;
+            color: white;
+        }
+         .website-name:hover{
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+     <nav>
+        <div class="website-name">MovieDB</div>
+        <a href="popular.html" onclick="showGrid('popular')">Popular</a>
+        <a href="toprated.html">Top Rated</a>
+      
+        <a href="upcoming.html" onclick="showGrid('upcoming')">Upcoming</a>
+        <input type="search" id="query" name="q" placeholder="Movie Name..">
+  <button>Search</button>
+
+    </nav>
+    <!-- FOR Top RATED MOVIES -->
+
+         <div class="grid-container" id="grid-toprated">
+
+        <div class="grid-item">
+             <img src="https://m.media-amazon.com/images/M/MV5BZTA3YzRiZGMtYWEzZS00NzY5LThhMWMtY2I1YTJhYjhmNGE4XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_.jpg" alt="Movie 1">
+            <figcaption>Dilwale Dulhaniya Le Jayenge<br>Rating 8.7</figcaption>
+        </div>
+        <div class="grid-item">
+             <img src="https://totallyhistory.com/wp-content/uploads/2023/02/The-Shawshank-Redemption-Movie-750x1000-1-300x400.jpg" alt="Movie 3">
+            <figcaption>The Shawshank Redemption <br>Rating 8.7</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://plakati.bg/image/cache/data/poster-maxi/PP30558-511x768-300x400.jpg" alt="Movie 3">
+            <figcaption>The Godfather <br>Rating 8.7</figcaption>
+        </div>
+        <div class="grid-item">
+            <img src="https://img1.od-cdn.com/ImageType-400/4039-1/12D/F3F/73/%7B12DF3F73-C786-4CFC-978E-764ADBF9C01A%7DImg400.jpg" alt="Movie 4">
+
+            <figcaption>Gabriel's Inferno <br>Rating 8.7</figcaption>
+        </div>
+    </div>
+
+
+    <script>
+        function showGrid(category) {
+            // Hiding rest of  grids
+            document.querySelectorAll('.grid-container').forEach(grid => {
+                grid.style.display = 'none';
+            });
+
+            // Show the selected grid
+            const selectedGrid = document.getElementById(`grid-${category}`);
+            if (selectedGrid) {
+                selectedGrid.style.display = 'grid';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
